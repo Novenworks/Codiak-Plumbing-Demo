@@ -109,7 +109,7 @@ export default function HomePage() {
           <div className="mx-auto flex max-w-6xl flex-wrap items-end justify-between gap-6 px-4">
             <div>
               <h2 className="text-3xl">Ready for an estimate?</h2>
-              <p className="mt-3 text-white/70">This demo does not collect leads.</p>
+              <p className="mt-3 text-white/70">Call or email Codiak Plumbing to discuss your project.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <a href={TEL} className="rounded bg-rust px-5 py-3 font-semibold">{PHONE}</a>
@@ -119,7 +119,7 @@ export default function HomePage() {
         </section>
       </main>
       <footer className="bg-ink px-4 py-8 text-sm text-white/60">
-        <p>Speculative redesign by Novenworks. Not an official Codiak site.</p>
+        <p>Codiak Plumbing · Redlands / Yucaipa / Calimesa</p>
       </footer>
     </div>
   );
