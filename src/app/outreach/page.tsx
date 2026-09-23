@@ -19,17 +19,17 @@ export default function OutreachPage() {
         <h2 className="text-xl">Subject lines</h2>
         <ol className="mt-3 list-decimal space-y-2 pl-5">
           <li>Coty, I made something for Codiak Plumbing</li>
-          <li>Had an idea for Codiak Plumbing</li>
-          <li>Tried something with the Codiak Plumbing site</li>
+          <li>had an idea for Codiak Plumbing</li>
+          <li>quick thing I built for Codiak Plumbing</li>
         </ol>
         <h2 className="mt-8 text-xl">Cold email</h2>
         <pre className="mt-3 whitespace-pre-wrap">{`Hi Coty,
 
-I came across Codiak Plumbing and ended up spending some time looking through the site.
+I came across Codiak Plumbing and ended up spending a little time on the site.
 
-The real work is already the strongest part of the story.
+You already have the part that matters, real work and a business people can trust.
 
-I had an idea for how I'd present it, so I built a version instead of sending you a bunch of suggestions.
+I had an idea for how I'd present it, so I built a version instead of sending you a list of suggestions.
 
 https://codiak-plumbing-demo.vercel.app
 
@@ -42,11 +42,11 @@ Novenworks`}</pre>
         <h2 className="mt-8 text-xl">Follow-up</h2>
         <pre className="mt-3 whitespace-pre-wrap">{`Hi Coty,
 
-Just bumping this once in case it got buried. I put together that Codiak Plumbing concept and wanted to make sure you saw it.
+Just bumping this once in case it got buried. I made that Codiak Plumbing homepage concept and figured you might at least be curious to see how it came out.
 
 https://codiak-plumbing-demo.vercel.app
 
-All good if it's not something you're looking at right now.
+All good if now isn't the time. Just wanted to make sure you saw it.
 
 Vincent`}</pre>
       </section>
