@@ -25,24 +25,28 @@ export default function OutreachPage() {
         <h2 className="mt-8 text-xl">Cold email</h2>
         <pre className="mt-3 whitespace-pre-wrap">{`Hi Coty,
 
-I came across Codiak Plumbing and ended up spending some time on the site.
+I came across Codiak Plumbing and ended up spending some time looking through the site.
 
-You already have real work to show. I had an idea for giving the projects and proof more room, so I built a version.
+The real work is already the strongest part of the story.
+
+I had an idea for how I'd present it, so I built a version instead of sending you a bunch of suggestions.
 
 https://codiak-plumbing-demo.vercel.app
 
-Thought you might be curious to see it. If the direction clicks, I can show you what I changed.
+Thought you might be curious to see it.
+
+If you like the direction, I can show you what I changed.
 
 Vincent
 Novenworks`}</pre>
         <h2 className="mt-8 text-xl">Follow-up</h2>
         <pre className="mt-3 whitespace-pre-wrap">{`Hi Coty,
 
-Just bumping this once in case it got buried. I put together that Codiak Plumbing homepage idea and wanted to make sure you saw it.
+Just bumping this once in case it got buried. I put together that Codiak Plumbing concept and wanted to make sure you saw it.
 
 https://codiak-plumbing-demo.vercel.app
 
-No pressure if the timing is bad. Figured it was worth sending.
+All good if it's not something you're looking at right now.
 
 Vincent`}</pre>
       </section>
