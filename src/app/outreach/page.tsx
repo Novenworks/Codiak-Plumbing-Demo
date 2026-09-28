@@ -14,7 +14,26 @@ export default function OutreachPage() {
       </ul>
       <h2 className="mt-8 text-xl">Pitch hinge</h2>
       <p>Portfolio /portfolio/tankless-water-heater/ is still Lorem Ipsum.</p>
-    
+
+      <section className="mt-10">
+        <h2 className="text-xl">Before / after</h2>
+        <p className="mt-2 text-sm text-black/60">Captured 2026-09-27. Before: live redlands-plumbing.com. After: this demo.</p>
+        <figure className="mt-5">
+          <img src="/outreach/before-desktop.jpg" alt="Before: current redlands-plumbing.com homepage, desktop 1440x900" width={1440} height={900} className="w-full border border-black/10" />
+          <figcaption className="mt-2 text-sm text-black/60">Before — redlands-plumbing.com, desktop 1440×900</figcaption>
+        </figure>
+        <div className="mt-8 grid gap-6 sm:grid-cols-[2fr_1fr] sm:items-start">
+          <figure>
+            <img src="/outreach/after-desktop.jpg" alt="After: Codiak Plumbing demo homepage, desktop 1440x900" width={1440} height={900} className="w-full border border-black/10" />
+            <figcaption className="mt-2 text-sm text-black/60">After — demo, desktop 1440×900</figcaption>
+          </figure>
+          <figure>
+            <img src="/outreach/after-mobile.jpg" alt="After: Codiak Plumbing demo homepage, mobile 390x844" width={390} height={844} className="w-full border border-black/10" />
+            <figcaption className="mt-2 text-sm text-black/60">After — demo, mobile 390×844</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className="mt-10">
         <h2 className="text-xl">Subject lines</h2>
         <ol className="mt-3 list-decimal space-y-2 pl-5">

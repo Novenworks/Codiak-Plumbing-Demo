@@ -1,3 +1,5 @@
+import MobileNav from './MobileNav';
+
 const PHONE = '(909) 435-7865';
 const TEL = 'tel:+19094357865';
 const EMAIL = 'mailto:info@Redlands-Plumbing.com';
@@ -11,6 +13,14 @@ const services = [
   { title: 'New construction', body: 'Code-aware plumbing for new builds in Redlands and nearby communities.' },
   { title: 'Repairs & fixtures', body: 'Leaky faucets, valves, water pressure, and everyday calls.' },
   { title: 'Commercial', body: 'Non-residential service for shops and buildings.' },
+];
+
+const navLinks = [
+  { href: '#services', label: 'Services' },
+  { href: '#service-area', label: 'Service Area' },
+  { href: '#about', label: 'About' },
+  { href: '#reviews', label: 'Reviews' },
+  { href: '#contact', label: 'Contact' },
 ];
 
 const quotes = [
@@ -29,14 +39,15 @@ export default function HomePage() {
             <img src={LOGO} alt="Codiak Plumbing" className="h-12 w-auto" />
             <span className="hidden text-sm sm:block">Codiak Plumbing</span>
           </a>
-          <nav className="hidden gap-6 text-sm md:flex">
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
+          <nav aria-label="Main" className="hidden gap-6 text-sm md:flex">
+            {navLinks.map((l) => (
+              <a key={l.href} href={l.href}>{l.label}</a>
+            ))}
           </nav>
-          <a href={TEL} className="rounded bg-rust px-3 py-2 text-sm font-semibold">{PHONE}</a>
+          <div className="flex items-center gap-2">
+            <a href={TEL} className="rounded bg-rust px-3 py-2 text-sm font-semibold">{PHONE}</a>
+            <MobileNav links={navLinks} />
+          </div>
         </div>
       </header>
       <main id="top">
@@ -52,14 +63,14 @@ export default function HomePage() {
               </div>
               <p className="mt-6 text-sm text-white/60">Owner/operator Coty Carr · 24/7 emergency service · CSLB #1065137</p>
             </div>
-            <img src={CREW} alt="Imagery from the current Codiak website" className="h-[420px] w-full object-cover object-top" />
+            <img src={CREW} alt="Plumber installing a kitchen faucet" className="h-[420px] w-full object-cover object-top" />
           </div>
         </section>
         <section className="border-y bg-white">
           <div className="mx-auto grid max-w-6xl gap-6 px-4 py-6 text-sm sm:grid-cols-3">
             <p><strong>Owner-operated.</strong> Coty Carr runs the company from Yucaipa.</p>
             <p><strong>Licensed plumbing.</strong> CSLB #1065137, C-36.</p>
-            <p><strong>Emergency coverage.</strong> 24/7 as published on the current site.</p>
+            <p><strong>Emergency coverage.</strong> Emergency service available 24/7.</p>
           </div>
         </section>
         <section id="services" className="mx-auto max-w-6xl px-4 py-20">
@@ -74,17 +85,17 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-        <section id="work" className="bg-ink py-20 text-white">
+        <section id="service-area" className="bg-ink py-20 text-white">
           <div className="mx-auto max-w-6xl px-4">
-            <p className="text-xs uppercase tracking-widest text-red-300">Proof, not filler</p>
-            <h2 className="mt-2 text-3xl">Real work should live here — not Lorem Ipsum</h2>
-            <p className="mt-4 max-w-2xl text-white/70">The tankless portfolio page still carries template copy and a dummy client name. Job photos belong here once first-party shots exist.</p>
+            <p className="text-xs uppercase tracking-widest text-red-300">Where we work</p>
+            <h2 className="mt-2 text-3xl">Serving Redlands, Yucaipa, Calimesa and surrounding cities</h2>
+            <p className="mt-4 max-w-2xl text-white/70">Based in Yucaipa and working across the Redlands area for homes and commercial buildings. Emergency service is available 24/7 — call <a href={TEL} className="underline underline-offset-4">{PHONE}</a> and tell us what is going on.</p>
           </div>
         </section>
         <section id="about" className="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-2">
           <div>
             <h2 className="text-3xl">Owner-operated plumbing with more range than emergency calls</h2>
-            <p className="mt-4 text-black/75">Codiak Plumbing Services is a California corporation at 33879 Nebraska Street, Yucaipa. Coty Carr is owner/operator on the company site.</p>
+            <p className="mt-4 text-black/75">Codiak Plumbing Services is a California corporation at 33879 Nebraska Street, Yucaipa. Coty Carr is the owner/operator.</p>
           </div>
           <ol className="space-y-4 border border-black/10 bg-white p-6">
             <li>01 Call or request an estimate.</li>
@@ -94,12 +105,13 @@ export default function HomePage() {
         </section>
         <section id="reviews" className="bg-white py-20">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-3xl">Reviews published on the current Codiak site</h2>
+            <h2 className="text-3xl">What customers have said</h2>
+            <p className="mt-3 text-black/60">Reviews from Yelp.</p>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {quotes.map((q) => (
                 <blockquote key={q.name} className="border border-black/10 p-6">
                   <p>{q.text}</p>
-                  <footer className="mt-4 text-sm text-black/60">{q.name} · Yelp reviewer, as shown on redlands-plumbing.com</footer>
+                  <footer className="mt-4 text-sm text-black/60">{q.name} · Yelp review</footer>
                 </blockquote>
               ))}
             </div>
