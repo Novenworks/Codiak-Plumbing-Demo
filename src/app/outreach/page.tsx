@@ -2,7 +2,7 @@ export const metadata = { title: 'Outreach | Codiak Plumbing Demo', robots: { in
 export default function OutreachPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-12 leading-relaxed">
-      <p className="text-xs uppercase tracking-widest text-rust">Operator only · noindex</p>
+      <p className="text-xs uppercase tracking-widest text-signal-dark">Operator only · noindex</p>
       <h1 className="mt-2 text-3xl">Codiak Plumbing outreach brief</h1>
       <ul className="mt-6 list-disc pl-5">
         <li>Original: https://www.redlands-plumbing.com/</li>
@@ -17,7 +17,7 @@ export default function OutreachPage() {
 
       <section className="mt-10">
         <h2 className="text-xl">Before / after</h2>
-        <p className="mt-2 text-sm text-black/60">Captured 2026-09-27. Before: live redlands-plumbing.com. After: this demo.</p>
+        <p className="mt-2 text-sm text-black/60">Before captured 2026-09-27 (live redlands-plumbing.com). After captured 2026-10-05 (this demo).</p>
         <figure className="mt-5">
           <img src="/outreach/before-desktop.jpg" alt="Before: current redlands-plumbing.com homepage, desktop 1440x900" width={1440} height={900} className="w-full border border-black/10" />
           <figcaption className="mt-2 text-sm text-black/60">Before — redlands-plumbing.com, desktop 1440×900</figcaption>

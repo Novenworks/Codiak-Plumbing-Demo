@@ -1,4 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body { background: #f4efe6; color: #0e1418; }
+
+@layer base {
+  html {
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    /* Archivo's space glyph is narrow; open it slightly for readability. */
+    word-spacing: 0.06em;
+  }
+  h1, h2, h3, .display {
+    font-stretch: 82%;
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    word-spacing: 0.08em;
+    text-wrap: balance;
+  }
+  h1 { font-stretch: 74%; }
+  p { text-wrap: pretty; }
+  /* Red reads at 3:1+ against both the ink and paper backgrounds. */
+  :focus-visible {
+    outline: 3px solid #e0353c;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply text-[0.8125rem] font-bold uppercase tracking-[0.14em];
+  }
+  .btn {
+    @apply inline-flex min-h-[52px] items-center justify-center gap-2.5 rounded-md px-6 py-3 text-base font-bold transition-[background-color,border-color,color,transform] duration-150 active:translate-y-px;
+  }
+  .btn-primary {
+    @apply bg-signal text-white hover:bg-signal-dark active:bg-[#951820];
+  }
+  .btn-ghost {
+    @apply border-2 border-white/30 text-white hover:border-white hover:bg-white/5;
+  }
+  .btn-ghost-dark {
+    @apply border-2 border-ink/25 text-ink hover:border-ink hover:bg-ink/5;
+  }
+  .btn-dark {
+    @apply bg-ink text-white hover:bg-black;
+  }
+  .link {
+    @apply font-semibold underline decoration-2 underline-offset-4 transition-colors hover:decoration-signal;
+  }
+  .label {
+    @apply mb-1.5 block text-[0.9375rem] font-semibold;
+  }
+  .field {
+    @apply block min-h-[48px] w-full rounded-md border border-[#bdb5a8] bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-[#7a7f85] transition-colors hover:border-ink/60 focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/20;
+  }
+}
